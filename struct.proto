@@ -1,0 +1,15 @@
+syntax = "proto3";
+package my.package;
+
+option go_package = "./gobindings"; // golang
+
+message NestedStruct {
+	string bang = 1;
+	int32 intButWeGetString = 2;
+}
+
+message Struct {
+	string baz = 1;
+	NestedStruct containsError = 2;
+}
+
